@@ -1,0 +1,4 @@
+x = input(float("USD cần đổi: ")
+y = input(float("Tỷ giá USD/VND: ")
+VND = x*y
+print("Quy đổi VND/USD: ",VND)
