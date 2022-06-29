@@ -1,0 +1,21 @@
+a = float(input("Chiều cao: ")
+b = float(input("Cân nặng: ")
+BMI = a/(b**2)
+
+if BMI > 40:
+  print("Béo phì độ III")
+elif BMI >= 35:
+  print("Béo phì độ II")
+elif BMI >= 30:
+  print("Béo phì độ I")
+elif BMI >= 25:
+  print("Thừa cân")
+elif BMI >= 18,5:
+  print("Bình thường")
+elif BMI >= 17:
+  print("Gầy độ I")
+elif BMI >= 16:
+  print("Gầy độ II")
+else:
+  print("Gầy độ III)
+  
