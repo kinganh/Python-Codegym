@@ -1,0 +1,10 @@
+import turtle
+t = turtle.Turtle()
+
+x = 0.5
+while x < 100:
+    t.fd(x)
+    t.lt(40)
+    x += 0.5
+
+
