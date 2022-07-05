@@ -1,0 +1,22 @@
+import turtle
+
+t = turtle.Turtle()
+t.speed(0)
+screen = turtle.Screen()
+screen.setup(500,500)
+screen.bgcolor("black")
+col = ["pink","blue","yellow","green"]
+
+for i in range(36):
+    t.rt(10)
+    j = 0
+    t.color(col[j])
+    j += 1
+    if j == 4:
+        j = 0
+    x = 1
+    while x < 3:
+        t.circle(50,90)
+        t.circle(25,90)
+        x += 1 
+turtle.done()
