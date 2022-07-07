@@ -1,0 +1,23 @@
+import turtle
+t =  turtle.Turtle()
+t.pencolor("green")
+t.pensize(5)
+
+t.pu()
+t.goto(-100,-100)
+t.pd()
+x = 50
+y = 50
+for i in range(7):
+    for j in range(3):
+        for k in range(4):
+            t.fd(x)
+            t.lt(90)
+        t.pu()
+        t.fd(x)
+        t.pd()
+    t.pu()
+    t.goto(-100,-100 + y)
+    t.pd()
+    y += 50
+turtle.done()
