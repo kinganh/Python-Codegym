@@ -1,0 +1,9 @@
+def tim_so_nho_nhat(a):
+  min = a[0]
+  for i in a:
+    if min > i:
+      min = i
+  return i
+  
+T = (1232,4,348,31,3)
+tim_so_nho_nhat(T)
