@@ -1,0 +1,7 @@
+def sort(a,b,c):
+  M = max(a,b,c)
+  m = min(a,b,c)
+  T = (a+b+c) - M - m
+  return m,T,M
+
+print("Sort:", sort(6,9465,432))
