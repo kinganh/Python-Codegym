@@ -1,0 +1,63 @@
+Menu = {"1": "Cơm rang", "2": "Phở bò", "3": "Bánh cuốn", "4": "Cháo trai"}
+
+def display():
+    for i in Menu:
+        print(i,":",Menu[i],sep = "")    
+
+def add():
+    while True:
+        stt = input("STT: ")
+        if stt in Menu:
+            print("Đã tồn tại món, vui lòng nhập lại")
+            continue
+        if stt == "0":
+            print ("Kết thúc tác vụ")
+            break
+        monan = input("Vui lòng thêm món: ")
+        Menu[stt] = monan
+    display()      
+    
+def edit():
+    while True:
+        stt = input("STT: ")
+        if stt in Menu:
+            print (Menu[stt])
+            Menu[stt] = input("Tên món mới: ")
+        if stt not in Menu and stt != "0":
+            print("Không tồn tại món, vui lòng nhập lại")
+            continue
+        if stt == "0":
+            print ("Kết thúc tác vụ")
+            break
+    display()  
+
+def remove():
+    while True:
+        stt = input("STT: ")
+        if stt in Menu:
+            tenmon = Menu[stt]
+            Menu = Menu.pop(stt)
+        if stt not in Menu and stt != "0":
+            print("Không tồn tại món, vui lòng nhập lại")
+            continue
+        if stt == "0":
+            print ("Kết thúc tác vụ")
+            break
+    display()    
+
+while True:
+    Func = input("Lựa chọn chức năng: ")
+    if Func == "D":
+        display()
+    elif Func == "A":
+        add()
+    elif Func == "E":
+        edit()
+    elif Func == "R":
+        remove()
+    elif Func == "0":
+        print ("Hân hạnh phục vụ")
+        print("________________________")
+        break    
+    print ("Hân hạnh phục vụ")
+    print("________________________")
