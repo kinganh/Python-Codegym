@@ -1,0 +1,17 @@
+vb = "Tổ đàm phán đánh giá phương án điều chỉnh cùng lúc thời gian thực hiện và quỹ đất thanh toán cho dự án sẽ tạo đồng thuận giữa các bên vì có cơ sở để ngân hàng BIDV giải ngân. Bởi nếu không có điều khoản quỹ đất thanh toán ở phụ lục hợp đồng BT điều chỉnh, BIDV không tiếp tục ký hợp đồng tín dụng. Việc này cũng khiến Ngân hàng Nhà nước không thể gia hạn tái cấp vốn cho công trình."
+
+vb = vb.replace(".","")
+vb = vb.replace(",","")
+
+vb = vb.split()
+
+D = {}
+for i in vb:
+    i = i.lower()
+    if i in D:
+        D[i] += 1
+    else:
+        D[i] = 1
+
+print(D)
+    
