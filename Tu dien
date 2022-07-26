@@ -1,0 +1,10 @@
+Dict = {"rice": "com", "noodle": "my", "bread": "banh mi"}
+
+def translate(Dict, word):
+    for i in Dict:
+        if i == word:
+            print(Dict[i])
+
+word = input("Nhập từ:")
+
+translate(Dict, word)
