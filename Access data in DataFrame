@@ -1,0 +1,19 @@
+import pandas as pd
+df=pd.read_csv('FoodPrice_in_Turkey.csv')
+
+tg = df.iloc[3]
+tg = df.iloc[3:8]
+tg = df.iloc[[3,5,7]]
+tg = df.iloc[:,4]
+tg = df.iloc[:,3:8]
+tg = df.iloc[3,7]
+tg = df.iloc[3:5,5:7]
+
+tg = df.loc[3]
+tg = df.loc[:,'UmName']
+tg = df.loc[:,['UmName','Month']]
+tg = df.loc[3,'Price']
+tg = df.loc[df.Year >= 2019]
+df.replace(5,10,inplace = True)
+df.replace(52,'RR',inplace = True)
+df['Month'].replace(10,5,inplace = True)
