@@ -1,0 +1,5 @@
+import pandas as pd
+
+df = pd.read_csv("FoodPrice_in_Turkey.csv")
+
+df.head()
