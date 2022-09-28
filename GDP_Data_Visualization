@@ -1,0 +1,27 @@
+from wsgiref.simple_server import WSGIRequestHandler
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+
+df = pd.read_csv('Data Visualization\GDPlist.csv', encoding = "ISO-8859-1")
+
+# So sánh GDP các nước ở South America.
+data1 = df[df['Continent'] == 'South America']
+plt.bar(data1['Country'], data1['GDP (millions of US$)'])
+plt.title('List South American countries by GDP')
+plt.xlabel('Country')
+plt.ylabel('GDP (millions of US$)')
+plt.show()
+print(data1)
+
+# Đánh giá tỉ lệ đóng góp GDP của Việt Nam trên tổng số GDP của 5 nước Đông Nam Á 
+# là Vietnam,  Indonesia, Cambodia, Thailand và Malaysia.
+df['Country'] = df['Country'].apply(lambda x: str(x).strip())
+data2 = df[
+    (df['Country'] == 'Vietnam') | 
+    (df['Country'] == 'Indonesia') | 
+    (df['Country'] == 'Cambodia') |
+    (df['Country'] == 'Thailand') |
+    (df['Country'] == 'Malaysia')]
+plt.pie(data2['GDP (millions of US$)'],labels = data2['Country'], autopct='%1.2f%%')
+plt.show()
